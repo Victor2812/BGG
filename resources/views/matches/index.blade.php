@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'Matches')
 
 @section('main')
-    <h1>HOME</h1>
+    <h1>Partidas</h1>
 @endsection

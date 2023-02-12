@@ -1,0 +1,10 @@
+@import "mixins";
+
+// subrayado en los nav-items
+.nav-item::after {
+    @include after-guapo(white, 2px)
+}
+
+.nav-item:hover::after {
+    @include after-hover-guapo;
+}

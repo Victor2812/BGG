@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\MatchesController;
+use App\Http\Controllers\ShopController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Home
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+// Events
+Route::resource('/events', EventsController::class);
+
+// Bookings
+Route::resource('/booking', BookingController::class);
+
+// Matches
+Route::resource('/matches', MatchesController::class);
+
+// Shop
+Route::resource('/shop', ShopController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

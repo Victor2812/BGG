@@ -1,0 +1,13 @@
+@mixin after-guapo($color, $heigth) {
+    content: "";
+    height: $heigth;
+    width: 0;
+    background-color: $color;
+    margin: auto;
+    display: block;
+}
+
+@mixin after-hover-guapo {
+    width: 100%;
+    transition: width 0.3s linear;
+}
