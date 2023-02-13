@@ -54,7 +54,7 @@ function fillSearchBox(result) {
         line.setAttribute('id', e.id);
         line.className = 'listGroupItem';
 
-        line.innerText = name + ' ' + year;
+        line.innerText = name + ' ' + "(" + year + ")";
 
         searchbox.appendChild(line);
     });
